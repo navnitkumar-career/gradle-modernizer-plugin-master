@@ -1,0 +1,21 @@
+pluginManagement {
+  repositories {
+    mavenLocal()
+    gradlePluginPortal()
+  }
+}
+
+plugins {
+  id 'org.gradle.toolchains.foojay-resolver-convention' version '0.4.0'
+}
+
+dependencyResolutionManagement {
+  repositories {
+    mavenCentral()
+  }
+
+  // Doesn't play nice with Gradle import in IntelliJ IDEA
+  //repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+}
+
+rootProject.name = 'gradle-modernizer-plugin'
